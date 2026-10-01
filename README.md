@@ -67,5 +67,4 @@ ng serve
 
 
 Desenvolvido por: Guilherme Junque Karabedrossian - Junior Java Developer
-Bash
 
