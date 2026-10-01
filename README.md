@@ -60,8 +60,12 @@ cd barber-shop-api
 
 4. Executando o Frontend
 
-Desenvolvido por: Guilherme Junque Karabedrossian - Junior Java Developer
-Bash
+
 cd barber-shop-ui
 npm install
 ng serve
+
+
+Desenvolvido por: Guilherme Junque Karabedrossian - Junior Java Developer
+Bash
+
