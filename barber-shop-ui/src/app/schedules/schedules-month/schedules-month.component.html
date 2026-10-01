@@ -1,0 +1,18 @@
+<div class="schedules-container">
+  <header class="page-header">
+    <div class="header-content">
+      <h1>Agenda de Horários</h1>
+      <p>Gerencie os agendamentos e horários dos seus clientes</p>
+    </div>
+  </header>
+
+  <main class="calendar-card">
+    <app-schedule-calendar
+      [monthSchedule]="monthSchedule"
+      (onDateChange)="onDateChange($event)"
+      (onConfirmDelete)="onConfirmDelete($event)"
+      (onScheduleClient)="onScheduleClient($event)"
+      [clients]="clients">
+    </app-schedule-calendar>
+  </main>
+</div>

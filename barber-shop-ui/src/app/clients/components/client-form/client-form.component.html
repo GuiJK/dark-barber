@@ -1,0 +1,62 @@
+<form #form="ngForm" (ngSubmit)="onSubmit(form)" class="form-content">
+  <!-- Campo Nome -->
+  <div class="field-row">
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Nome*</mat-label>
+      <input
+        matInput
+        name="name"
+        id="name"
+        #nameModel="ngModel"
+        [(ngModel)]="client.name"
+        required>
+      @if (nameModel.hasError('required')) {
+      <mat-error>Informe o nome do cliente</mat-error>
+      }
+    </mat-form-field>
+  </div>
+
+  <!-- Linha com E-mail e Celular -->
+  <div class="fields-inline">
+    <mat-form-field appearance="outline" class="half-width">
+      <mat-label>E-mail*</mat-label>
+      <input
+        matInput
+        name="email"
+        id="email"
+        #emailModel="ngModel"
+        [(ngModel)]="client.email"
+        required
+        email>
+      @if (emailModel.hasError('required') || emailModel.hasError('email')) {
+      <mat-error>Informe um e-mail válido</mat-error>
+      }
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="half-width">
+      <mat-label>Celular*</mat-label>
+      <input
+        matInput
+        name="phone"
+        id="phone"
+        #phoneModel="ngModel"
+        [(ngModel)]="client.phone"
+        required
+        mask="(00) 00000-0000">
+      @if (phoneModel.hasError('required')) {
+      <mat-error>Informe o celular</mat-error>
+      }
+    </mat-form-field>
+  </div>
+
+  <!-- Botão de Ação -->
+  <div class="form-actions">
+    <button
+      type="submit"
+      mat-raised-button
+      color="primary"
+      [disabled]="form.invalid">
+      Salvar
+    </button>
+  </div>
+</form>

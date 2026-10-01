@@ -1,0 +1,29 @@
+:host {
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* Estiliza os botões/links do menu */
+a, button, .mat-button-toggle-button {
+  color: #94a3b8 !important;
+  text-decoration: none !important;
+  font-size: 0.9rem !important;
+  font-weight: 600 !important;
+  padding: 0.4rem 1rem !important;
+  border-radius: 8px !important;
+  background: transparent !important;
+  border: none !important;
+  transition: all 0.2s ease !important;
+  cursor: pointer !important;
+
+  &:hover {
+    color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+  }
+
+  &.active, &[aria-selected="true"], &.mat-button-toggle-checked {
+    color: #ffffff !important;
+    background-color: #2563eb !important; /* Destaque em azul bonito */
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.4) !important;
+  }
+}

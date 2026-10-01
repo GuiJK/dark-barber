@@ -1,0 +1,27 @@
+:host {
+  display: flex;
+  align-items: center;
+}
+
+/* Remove completamente o card branco e a borda do Angular Material */
+::ng-deep .card-title,
+.card-title,
+mat-card {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+mat-card-header {
+  padding: 0 !important;
+}
+
+mat-card-title, .mat-mdc-card-title {
+  color: #ffffff !important;
+  font-size: 1.25rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.5px;
+}
